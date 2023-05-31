@@ -1,4 +1,5 @@
 #  The contact options.
+#  icons from https://fontawesome.com/icons/signs-post?f=classic&s=solid
 
 - type: github
   icon: "fab fa-github"
