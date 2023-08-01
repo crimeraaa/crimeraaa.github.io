@@ -9,13 +9,14 @@ tags: [terminal,shortucts,vscode]
 
 Note: For parameters enclosed in angled brackets, i.e. `<name>`, replace both the word and the brackets with your input.
 
-Do note that some of these commands also apply for the terminal in general!
+Do note that many of these commands also apply for the terminal or keyboard in general.
 
 > This doesn't really go anywhere, but it's super helpful:
 >
 > `CTRL + K + V` previews Markdown files! 
 >
-> ...do make sure `CTRL` isn't held by the time you press `V` though, otherwise it's considered a Chord.
+> ...do make sure `CTRL` isn't held by the time you press `V` though.
+> This is because `CTRL + K` is a "chord" which expects another key afterwards.
 
 ## Basic Commands
 
@@ -125,48 +126,5 @@ code hi_mom.c
 `ALT + SHIFT + UP/DOWN`
 
 * Quickly copies the current line downwards.
-
-#### *Well you made it this far :)*
-
-```c
-#include <stdbool.h>
-#include <stdio.h>
-
-#define NUM_ARGS 2
-
-typedef struct 
-{
-    char* name;
-    bool is_awesome;
-} Person;
-
-void Greet(Person *receiver)
-{
-    if (receiver->is_awesome)
-    {
-        printf("Hey %s, you're awesome :)\n", receiver->name);
-    }
-    else
-    {
-        printf("Hi %s!\n", receiver->name);
-    }
-}
-
-int main(int argc, char **argv)
-{
-    if (argc == 1 || argc != NUM_ARGS)
-    {
-        printf("Usage: ./greet name\n");
-        printf("Give us a person to greet!");
-    }
-    Person you = {
-        .name = argv[1],
-        // Init to true always
-        .is_awesome = true;
-    }
-    Greet(you);
-    return 0;
-}
-```
 
 
